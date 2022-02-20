@@ -41,10 +41,10 @@ header .logo {
 }
 
 header .sub-menu {
-position: absolute;
-top: 10px;
-right: 0px;
-  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+   display: flex;
 }
 
 header .sub-menu ul.menu {
@@ -115,8 +115,8 @@ position: absolute;
 height: 24px;
 top:0;
 bottom : 0;
-right:5px;
-margin: atuo;
+right: 5px;
+margin: auto;
 transition: .4s;
 
 }
@@ -150,9 +150,9 @@ border-radius: 6px 6px 0 0;
 }
 
 header .main-menu .item .item__contents {
-width:100%;
+width: 100%;
 position: fixed;
-left : 0;
+left: 0;
 display: none;
 }
 
@@ -161,13 +161,38 @@ display: block;
 }
 
 header .main-menu .item .item__contents .contects__menu {
-
-  background-color: red;
-  height: 200px;
-
+  background-color: #2c2a29;
+  
 }
-header .main-menu .item .item__contents .contects__texture {
 
+header .main-menu .item .item__contents .contents__menu > ul {
+  display: flex;
+  padding: 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul> li {
+width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li h4 {
+padding : 3px 0 12px 0;
+font-size : 14px;
+color : #fff;
+}
+
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul li {
+padding: 5px 0;
+font-size : 12px;
+color: #999;
+cursor:pointer;
+}
+
+header .main-menu .item .item__contents .contents__texture {
   background-color: orange;
   height: 100px;
 }
+
+
+
+
