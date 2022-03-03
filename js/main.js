@@ -51,8 +51,43 @@ opacity: 1
 });
 
 // new swiper(선택자, 옵션)
-new Swiper('.notice-line .swiper-container', {
+new Swiper('.notice-line .swiper', {
   direction: 'vertical',
-  // autoplay: true,
-  // loap : true
+ autoplay: true,
+  loap : true
 });
+
+new Swiper('.promotion .swiper', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loap: true,
+  autoplay: {
+    delay: 3000
+  },
+  pagination : {
+    el: '.promotion .swiper-pagination', //페이지 번호 요소 선택자
+    clickable: true //사용자의 페이지 번호 요소 제어
+   },
+   navigation: {
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next'
+   }
+   
+});
+
+ const promotionEl = document.querySelector('.promotion')
+ const promotionToggleBtn = document.querySelector('.toggle-promotion')
+ let isHidePrmotion = false;
+ promotionToggleBtn.addEventListener('click', function () {
+    isHidePrmotion= !isHidePrmotion
+    if  (isHidePrmotion) {
+      //숨긴처리
+      promotionEl.classList.add('hide');
+    }else {
+      //보임 처리
+      promotionEl.classList.remove('hide');
+      
+    }
+ }); 
+ 
