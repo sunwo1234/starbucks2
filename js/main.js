@@ -117,9 +117,11 @@ function random(min, max) {
 
  const spyEls = document.querySelectorAll('section.scroll-spy');
  spyEls.forEach(function (spyEl) {
-   new ScrollMagic.Scene({
+   new ScrollMagic
+   .Scene({
      triggerElement: spyEl, //보여짐 여부를 감시할 요소
      triggerHook: .8
-   }) .setclassToggle(spyEl, 'show') 
-   .addTO(new ScrollMagic.controller());
+   }) 
+   .setclassToggle(spyEl, 'show') 
+   .addTo(new ScrollMagic.controller());
  })
